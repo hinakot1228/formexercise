@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 【初心者向け】0からformがわかる｜HTMLでのフォーム作成https://webliker.info/79009/ -->
+
+    <form action="confirm.php" method="post">
+        <label for="name">名前：</label>
+        <input id="name" type="text" name="yourname" placeholder="山田太郎">
+        <br>
+        <input type="reset" value="リセットする">
+        <br>
+        <label for="num">予約番号：</label>
+        <input id="num" type="number" name="yoyaku-num">
+        <br>
+        <label for="mail">メール：</label>
+        <input id="mail" type="email" name="mail">
+        <br>
+        <label for="comment">コメント：</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="ここには自由にコメントを記入してください"></textarea>
+        <br>
+        <select name="sushi">
+            <option value="maguro">まぐろ</option>
+            <option value="ika">いか</option>
+            <option value="ebi">えび</option>
+        </select>
+        <br>
+        <p>性別を選択</p>
+        <input id="male" type="radio" name="sex" value="male"><label for="male">男性</label>
+        <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
+        <br>
+        <p>好きなスポーツ</p>
+        <input id="football" type="checkbox" name="sport" value="サッカー"><label for="football">サッカー</label>
+        <input id="baseball" type="checkbox" name="sport" value="野球"><label for="football">野球</label>
+        <input id="basketball" type="checkbox" name="sport" value="バスケ"><label for="basketball">バスケ</label>
+        <br>
+        <p>好きな季節</p>
+        <input id="summer" type="radio" name="season" value="夏"><label for="summer">夏</label>
+        <input id="winter" type="radio" name="season" value="冬"><label for="winter">冬</label>
+        <br>
+        <p>好きな天気</p>
+        <input id="sunny" type="radio" name="weather" value="晴れ"><label for="sunny">晴れ</label>
+        <input id="rainy" type="radio" name="weather" value="雨"><label for="rainy">雨</label>
+        <br>
+        <input type="submit" value="送信する">
+    </form>
+
+
+    <br><br><br>
+
+
+    <form action="confirm.php" method="POST">
+        <div class="resevation">
+             <h5>ご予約はこちらから！</h5>
+        </div>
+        <div class="resevation-list name">
+            <p>お名前</p>
+            <input type="text" name="yourname">
+        </div>
+        <div class="resevation-list email">
+            <p>メールアドレス</p>
+            <input type="email" name="mail">    
+        </div>
+        <div class="resevation-list">
+            <p>予約メニュー</p>
+            <input id="haircut" type="radio" name="menu" value="haircut"><label for="haircut">カット</label>
+            <input id="haircut-color" type="radio" name="menu" value="haircut-color"><label for="haircut-color">カット+カラー</label>
+            <input id="headspa" type="radio" name="menu" value="headspa"><label for="headspa">ヘッドスパ</label>    
+        </div>
+        <div class="resevation-list opinion">
+            <p>ご意見</p>
+            <textarea name="opinion" id="opinion" cols="30" rows="10"></textarea>
+        </div>
+        <div class="resevation-btn">
+            <input type="submit">
+            <input type="reset">    
+        </div>
+    </form>
+</body>
+</html>
